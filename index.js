@@ -13,7 +13,7 @@ fetch(url)
   .then(resp => resp.json())
   .then(function(data) {
     let authors = data.results;
-    return authors.map(function (author) => {
+    return authors.map(author => {
       let li = createNode('li'),
           img = createNode('img'),
           span = createNode('span');
@@ -22,7 +22,7 @@ fetch(url)
       append(li, img);
       append(li, span);
       append(ul, li);
-    })
+    });
   })
   .catch(function (error) {
     console.log(JSON.stringify(error));
