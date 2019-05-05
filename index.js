@@ -7,11 +7,9 @@ function append(parent, el) {
 }
 
 const ul = document.getElementById('authors');
-const url = 'http://randomuser.me/api/?results=10';
+const url = 'https://randomuser.me/api/?results=10';
 
-fetch(url, {
-  mode: "no-cors"
-})
+fetch(url)
   .then(resp => {
     console.log(JSON.stringify(resp.json()));
     return resp.json();
